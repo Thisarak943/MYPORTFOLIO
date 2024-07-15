@@ -196,7 +196,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
     .section__header {
         display: flex;
         justify-content: center;
@@ -204,7 +204,7 @@
     }
 
     .section__header .primary__title,
-    .section__header .description {
+    .section__header .title{
         text-align: center;
     }
 
