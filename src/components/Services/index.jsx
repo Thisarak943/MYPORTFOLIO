@@ -37,7 +37,7 @@ const Services = () => {
                     </article>
                     {/* End ui/ux */}
 
-                    <article className="service"style={{"--color-primary":"var(--color-success)"}}>
+                    <article className="service" style={{ "--color-primary": "var(--color-success)" }}>
                         <div className='service_top'>
                             <div className='icon_container'>
                                 <BsCodeSquare className='icon'/>
@@ -57,7 +57,7 @@ const Services = () => {
                     </article>
                     {/* End Web development */}
 
-                    <article className='service'style={{"--color-primary":"blueviolet"}}>
+                    <article className='service' style={{ "--color-primary": "blueviolet" }}>
                         <div className='service_top'>
                             <div className='icon_container'>
                                 <TfiWrite className='icon'/>
@@ -71,13 +71,15 @@ const Services = () => {
                                 eligendi, adipisci sequi reiciendis quisquam? Sapiente optio rerum sequi!
                             </p>
                         </div>
-                        <div className="sevices__bottom">
-                          <button className='btn btn_primary'>Read more</button>
-                          </div>
-                          </article>
-                          </div>
+                        <div className='service_bottom'>
+                            <button className='btn btn_primary'>Read more</button>
                         </div>
-                        </section>
+                    </article>
+                    {/* End Content Creation */}
+                </div>
+            </div>
+        </section>
     )
-  }
-export default Services
+}
+
+export default Services;

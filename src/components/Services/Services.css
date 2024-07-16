@@ -1,5 +1,169 @@
-#services .services__group{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:20px;
+/* Ensure the services section takes the full width of the screen and adds padding */
+#services {
+    background: var(--color-ui-2);
+    padding: 40px 0;
+    width: 100%; /* Full width */
+}
+
+/* Center the section wrapper and ensure it takes full width with some padding */
+#services .section_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; /* Full width */
+}
+
+/* Center the section header and ensure it takes full width */
+#services .section_header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%; /* Full width */
+}
+
+/* Set the primary title styling */
+#services .primary_title {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* Set the muted text styling and center it */
+#services .text_muted {
+    color: var(--color-text-muted);
+    font-size: 18px;
+    margin-top: 10px;
+    margin: 0 auto;
+    max-width: 800px; /* Limit width for better readability */
+}
+
+/* Update the services group to use a responsive grid layout */
+#services .services_group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    width: 100%; /* Full width */
+}
+
+/* Service card styling */
+#services .service {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-3);
+    color: var(--color-text);
+    padding: 40px 25px;
+    isolation: isolate;
+    cursor: pointer;
+}
+
+/* Service card hover effect */
+#services .service::before,
+#services .service::after {
+    content: "";
+    position: absolute;
+}
+
+#services .service::before {
+    width: 200%;
+    height: 200%;
+    background-image: conic-gradient(var(--color-primary),
+     transparent 60deg,
+      transparent 180deg,
+       var(--color-primary),
+        transparent 240deg);
+    inset: -50%;
+    z-index: -2;
+    animation: spin 9s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+#services .service:hover::before {
+  animation-play-state: running;
+}
+
+#services .service::after {
+  background: var(--color-ui-2);
+  inset: 0.25rem;
+  border-radius: calc(1.2rem - 0.25rem);
+  z-index: -1;
+  transition: var(--transition);
+}
+
+/* Service card top section styling */
+#services .service .service_top {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Icon container styling */
+#services .icon_container {
+    width: 80px;
+    background: var(--color-ui-2);
+    border: solid 1px var(--color-primary);
+    margin-right: 8px;
+}
+
+/* Icon styling */
+#services .service .icon {
+    font-size: 40px;
+    color: var(--color-primary);
+}
+
+/* Service title styling */
+#services .service .title {
+    font-size: 25px;
+    background: linear-gradient(to right, var(--color-primary) 0%, var(--color-white) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Service description styling */
+#services .service .description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    transition: var(--transition);
+}
+
+#services .service:hover .description {
+    color: var(--color-text);
+}
+
+/* Service bottom section styling */
+#services .service .service_bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Primary button styling */
+#services .service .btn.btn_primary {
+    background: linear-gradient(260deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    background-size: 200% auto;
+}
+
+#services .service .btn.btn_primary:hover {
+    background-position: right center !important;
+}
+
+/* Responsive styling for services group */
+@media (max-width: 1000px) {
+    #services .services_group {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    #services .service_top {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
 }
