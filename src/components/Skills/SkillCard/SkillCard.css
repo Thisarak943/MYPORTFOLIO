@@ -1,0 +1,63 @@
+.skill__card {
+    padding: 30px 40px; /* Larger padding for more space inside the card */
+    border: 1px solid transparent;
+    transition: var(--transition);
+    border-radius: var(--border-radius-3);
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for dark theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for better card definition */
+    /* margin-left: 5%;
+    margin-right: 5%; */
+    margin-inline-start: 5%;
+    margin-inline-end: 5%; 
+    
+    
+}
+
+.skill__card:hover {
+    background: black; /* Change to black background on hover */
+    border-color: var(--color-primary);
+    cursor: default;
+}
+
+.skill__card h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary); /* Primary color for titles */
+}
+
+.skill__card .skill__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for skills */
+    row-gap: 2rem; /* Row gap for spacing between rows */
+}
+
+.skill__card .skill__details {
+    display: flex;
+    gap: 1rem; /* Gap between icon and skill text */
+}
+
+.skill__card .skill__icon {
+    margin-top: 6px;
+    color: var(--color-primary); /* Primary color for icons */
+}
+
+.skill__card .skill__details .skill__name {
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: 500;
+    color: #fff; /* White color for skill names */
+}
+
+.skill__card .skill__details .skill__level {
+    font-size: 14px;
+    color: #a0a0a0; /* Muted color for skill level */
+}
+
+@media (max-width: 350px) {
+    .skill__card .skill__details .skill__name {
+        font-size: 12px; /* Smaller font size for narrow screens */
+    }
+
+    .skill__card .skill__details .skill__level {
+        font-size: 10px; /* Smaller font size for narrow screens */
+    }
+}
