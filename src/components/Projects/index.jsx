@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Projects.css';
 import { sumArray } from '../helper';
+import { projects } from '../../data';
+import Card from './Card';
 
 const tabs = [
     { name: "All" },
@@ -10,7 +12,7 @@ const tabs = [
 ];
 
 const Projects = () => {
-    const [displayableProjects,SetDisplayableProjects]=useState()
+    const [displayableProjects, setDisplayableProjects] = useState(projects);
     const [activeIndex, setActiveIndex] = useState(0);
     const [offset, setOffset] = useState(0);
     const [indicatorWidth, setIndicatorWidth] = useState(0);
@@ -35,10 +37,23 @@ const Projects = () => {
         };
     }, [activeIndex]);
 
+
+    const setProjects = (category) => {
+        if (category === "All") {
+            return setDisplayableProjects(projects);
+        }
+        const filteredProjects = projects.filter((item) => item.category.toLowerCase() === category.toLowerCase());
+        setDisplayableProjects(filteredProjects);
+    };
+
+    useEffect(() => {
+        setProjects(tabs[activeIndex].name);
+    }, [activeIndex]);
+
     return (
         <section id="projects">
             <div className="section__wrapper projects__container">
-                <div className="section__header center">
+                <div className="  center">
                     <h2 className="primary__title">Projects</h2>
                 </div>
             </div>
@@ -60,6 +75,16 @@ const Projects = () => {
                     }}
                 />
             </nav>
+            <div className='card__container'>
+                {displayableProjects.map((project, index) => (
+                    <Card
+                        title={project.title}
+                        image={project.image}
+                        data={project.data}
+                        stack={project.stack}
+                        key={index}
+                    />
+                ))}            </div>
         </section>
     );
 };
