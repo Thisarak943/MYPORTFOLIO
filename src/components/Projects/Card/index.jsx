@@ -19,10 +19,10 @@ const Card = (props) => {
                         {props.description}
                     </p>
                 </div>
-                <div className="card_details_bottom">
-                    <div className="stack_container">
-                        <div className="stack_left">Stack</div>
-                        <div className="stack_right">
+                <div className="card__details__bottom">
+                    <div className="stack__container">
+                        <div className="stack__left">Stack</div>
+                        <div className="stack__right">
                             <div className="stack_box__container">
                                 {
                                     props.stack.map((list, index) => {
@@ -40,17 +40,17 @@ const Card = (props) => {
                                                 </div>
                                             )
                                         }
-                                        return null; // Add return null to avoid ESLint warning
+                                        return null;
                                     })
                                 }
-                            </div> {/* end stack_box__container */}
+                            </div>
                             {
                                 props.stack.length > 4 ? (
                                     <div className="stack_view_more">
                                         <div className="more_btn" onClick={() => setOpenStackExpandBar(!openStackExpandBar)}></div>
-                                        <div className={`stack__expand__box ${openStackExpandBar ? "open__stack__expand__box" : ""}`}>
+                                        <div className={`stack_expand_box ${openStackExpandBar ? "open_stack_expand_box" : ""}`}>
                                             <h3 className="title">More Stack Used</h3>
-                                            <div className="stack__box__container">
+                                            <div className="stack_box__container">
                                                 {
                                                     props.stack.map((list, index) => {
                                                         if (index >= 4) {
@@ -67,18 +67,18 @@ const Card = (props) => {
                                                                 </div>
                                                             )
                                                         }
-                                                        return null; // Add return null to avoid ESLint warning
+                                                        return null;
                                                     })
                                                 }
                                             </div>
                                         </div>
                                     </div>
-                                ) : ""
+                                ) : null
                             }
                         </div>
-                    </div> {/* end of the stack__container */}
+                    </div>
                     <div className="button__container">
-                        <a href={props.demoLink} target='_blank' className='btn btn__primary'>Demo</a>
+                        <a href={props.demoLink} target='_blank' rel="noopener noreferrer" className='btn btn__primary'>Demo</a>
                         <div className="btn__share"><AiOutlineShareAlt /></div>
                     </div>
                 </div>

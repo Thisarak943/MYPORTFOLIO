@@ -61,20 +61,20 @@ Projects.css
     background: linear-gradient(260deg, #c084fc, #9d4edd);
 }
 
-#projects .card__container {
+#projects card__container {
     display: -grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     width: 100%;
 }
 @media (max-width:900px){
-    #projects.card__container {
+    #projects card__container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width:900px){
-    #projects.card__container {
+    #projects card__container {
         grid-template-columns: 1fr;
     }
     #projects nav button{
