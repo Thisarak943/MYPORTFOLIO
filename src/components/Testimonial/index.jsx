@@ -36,7 +36,7 @@ const Testimonial = () => {
         <div className="section__header">
           <h2 className="primary__title">Testimonials</h2>
           <p className="text_muted description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac consectetur quam.
+            Discover what clients are saying about their experiences working with me as their trusted web developer. From startups to established businesses, my dedication to crafting exceptional online experiences shines through in their words.
           </p>
         </div>
         <Swiper 
@@ -54,10 +54,13 @@ const Testimonial = () => {
           {
             data.map(({ avatar, name, review }, index) => (
               <SwiperSlide key={index}>
-                <div className='client__avatar'>
-                  <img src={avatar} alt={name} />
+                <div className='testimonial'>
+                  <div className='client__avatar'>
+                    <img src={avatar} alt={name} />
+                  </div>
+                  <h3 className="client__name">{name}</h3>
+                  <small className="client__review">{review}</small>
                 </div>
-                <small className="client__review">{review}</small>
               </SwiperSlide>
             ))
           }
