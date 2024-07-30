@@ -1,0 +1,28 @@
+.testimonial__section_wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 35% 60%;
+  }
+  
+  .testimonial__testimonial__container {
+    width: 100%;
+    page-break-inside: 4rem !important;
+  }
+  
+  .testimonial__Client__avater {
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: var(--gray-border);
+  }
+  
+  .testimonial__testimonial {
+    background: var(--color-ui-2);
+    text-align: center;
+    padding: 20px;
+    border-radius: var(--border-radius-4);
+    user-select: none;
+  }
+  
