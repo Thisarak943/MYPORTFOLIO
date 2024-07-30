@@ -19,36 +19,31 @@ const Contact = () => {
         </div>
         <div className='contact_group'>
           <div className='contact_options'>
-            <article className='contact_option'>
+            <article className='contact_option email'>
               <MdOutlineEmail className='contact_icon' />
               <h3>Email</h3>
               <h5>thisarak943@gmail.com</h5>
-              <a href="mailto :thisarak943@gmail.com" target='_blank'className='btn'>Send a Msg</a>
-           
-             </article>
-            <article className='contact_option'>
-              <RiMessengerLine className='contact_icon' />
-              <h3>Mesenger</h3>
-              <h5>Thisara Kandage</h5>
-              <a href="http://m.me/profile?id=profile-id" target='_blank'className='btn'>Send a Msg</a>
+              <a href="mailto:thisarak943@gmail.com" target='_blank' className='btn'>Send a Msg</a>
             </article>
-
-            <article className='contact_option'>
+            <article className='contact_option messenger'>
+              <RiMessengerLine className='contact_icon' />
+              <h3>Messenger</h3>
+              <h5>Thisara Kandage</h5>
+              <a href="http://m.me/profile?id=profile-id" target='_blank' className='btn'>Send a Msg</a>
+            </article>
+            <article className='contact_option whatsapp'>
               <BsWhatsapp className='contact_icon' />
               <h3>WhatsApp</h3>
               <h5>+94717445943</h5>
-              <a href="href=https://api.whatsapp.com/send?phone=+94717445943" target='_blank'className='btn'>Send a Msg</a>
+              <a href="https://api.whatsapp.com/send?phone=+94717445943" target='_blank' className='btn'>Send a Msg</a>
             </article>
           </div>
-
           <form>
-  <input type="text" name="name" placeholder="Your full name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows={7} placeholder="Your Message"></textarea>
-  <button type="submit" className="btn btn_primary"> Send Message</button>
-</form>
-
-
+            <input type="text" name="name" placeholder="Your full name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows={7} placeholder="Your Message"></textarea>
+            <button type="submit" className="btn btn_primary">Send Message</button>
+          </form>
         </div>
       </div>
     </section>

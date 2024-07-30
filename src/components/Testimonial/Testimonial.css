@@ -1,103 +1,109 @@
+/* Testimonial.css */
 #testimonial {
-    padding: 4rem 0;
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text */
-  }
-  
+  padding: 4rem 0;
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+}
+
+#testimonial .section__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1.5fr; /* Increased width for the topic section */
+  align-items: center;
+  padding: 0 1rem;
+}
+
+#testimonial .section__header {
+  text-align: left;
+}
+
+#testimonial .primary__title {
+  font-size: 2.5rem;
+  color: #a77bff; /* Purple color as seen in the image */
+  margin-bottom: 1rem;
+}
+
+#testimonial .text_muted {
+  font-size: 1rem;
+  color: #b3b3b3;
+}
+
+#testimonial .testimonial__container {
+  width: 100%;
+  padding-bottom: 4rem !important;
+}
+
+#testimonial .client__avatar {
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 2px solid #b3b3b3;
+}
+
+#testimonial .client__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#testimonial .testimonial {
+  background: #1e1e1e; /* Slightly lighter dark background */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  user-select: none;
+  margin: 1rem;
+  border: 2px solid #a77bff; /* Purple border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+#testimonial .testimonial:hover {
+  transform: translateY(-10px); /* Lift up effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for pop up effect */
+}
+
+#testimonial .client__name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#testimonial .client__review {
+  color: #b3b3b3;
+  font-weight: 300;
+  font-size: 0.875rem;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: #a77bff; /* Purple color for the pagination bullets */
+}
+
+.swiper-pagination-bullet {
+  opacity: 1; /* Ensure non-active buttons are visible */
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff; /* White color for active pagination bullet */
+}
+
+@media (max-width: 950px) {
   #testimonial .section__wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 1fr 1.5fr; /* Increased width for the topic section */
-    align-items: center;
-    padding: 0 1rem;
-  }
-  
-  #testimonial .section__header {
-    text-align: left;
-  }
-  
-  #testimonial .primary__title {
-    font-size: 2.5rem;
-    color: #a77bff; /* Purple color as seen in the image */
-    margin-bottom: 1rem;
-  }
-  
-  #testimonial .text_muted {
-    font-size: 1rem;
-    color: #b3b3b3;
-  }
-  
-  #testimonial .testimonial__container {
-    width: 100%;
-    padding-bottom: 4rem !important;
-  }
-  
-  #testimonial .client__avatar {
-    width: 4rem;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    border: 2px solid #b3b3b3;
-  }
-  
-  #testimonial .client__avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  #testimonial .testimonial {
-    background: #1e1e1e; /* Slightly lighter dark background */
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    user-select: none;
-    margin: 1rem;
-    border: 2px solid #a77bff; /* Purple border */
   }
-  
-  #testimonial .client__name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
+
+  #testimonial .section__header {
+    text-align: center;
   }
-  
-  #testimonial .client__review {
-    color: #b3b3b3;
-    font-weight: 300;
-    font-size: 0.875rem;
-    display: block;
-    width: 80%;
-    margin: 0.8rem auto 0;
+
+  #testimonial .testimonial {
+    margin: 1rem 0;
   }
-  
-  .swiper-pagination-clickable .swiper-pagination-bullet {
-    background: #a77bff; /* Purple color for the pagination bullets */
-  }
-  
-  .swiper-pagination-bullet {
-    opacity: 1; /* Ensure non-active buttons are visible */
-  }
-  
-  .swiper-pagination-bullet-active {
-    background: #fff; /* White color for active pagination bullet */
-  }
-  
-  @media (max-width: 950px) {
-    #testimonial .section__wrapper {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  
-    #testimonial .section__header {
-      text-align: center;
-    }
-  
-    #testimonial .testimonial {
-      margin: 1rem 0;
-    }
-  }
-  
+}

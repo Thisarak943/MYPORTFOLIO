@@ -1,9 +1,10 @@
+// Navbar.jsx
 import React, { useState } from 'react';
 import "./Navbar.css";
 import { SiWebmoney } from 'react-icons/si';
 import { menu } from "../../data";
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Correct imports from react-icons/fa
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
