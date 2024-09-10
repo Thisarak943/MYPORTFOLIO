@@ -1,8 +1,17 @@
+/* Light blue and dark blue border colors */
+:root {
+    --light-blue-border: #add8e6; /* Light blue color */
+    --light-blue-border-rgb: 173, 216, 230; /* RGB values for light blue */
+    --dark-blue-border: #003366; /* Dark blue color */
+    --dark-blue-border-width: 2px; /* Dark blue border width */
+}
+
+/* General Card Styles */
 .card {
     padding: 0;
     border-radius: var(--border-radius-3);
     background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    border: 2px solid var(--dark-blue-border); /* Dark blue border */
     transition: background 200ms, border 200ms;
     overflow: hidden;
     display: flex;
@@ -10,17 +19,20 @@
     flex-direction: column;
     justify-content: space-between;
     animation: zoomIn 400ms;
+    height: 400px; /* Increased height to accommodate more content */
 }
 
+/* Zoom in effect */
 @keyframes zoomIn {
     0% {
-        scale: 0.7;
+        transform: scale(0.7);
     }
     100% {
-        scale: 1;
+        transform: scale(1);
     }
 }
 
+/* Hover effects for interactive devices */
 @media (hover: hover) and (pointer: fine) {
     .card:hover {
         background: rgba(var(--card-rgb), 0.14);
@@ -31,160 +43,242 @@
     }
 }
 
-.card span {
-    display: inline-block;
-    transition: transform 200ms;
+/* Card details section */
+.card__details {
+    padding: var(--card-padding-vertical) var(--card-padding-horizontal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto; /* Added scrollbar for text content */
 }
 
-.card .title {
-    font-size: 16px;
-    font-weight: 600;
+/* Top section of card details */
+.card__details__top {
+    padding-bottom: 6px;
     margin-bottom: 10px;
+    border-bottom: 1px solid rgba(var(--light-blue-border-rgb), 0.5); /* Light blue border */
 }
 
-.card .picture {
-    height: 250px;
-    overflow: hidden;
-}
-
-.card .card__details {
-    flex: 1;
-    text-align: left;
-    padding: 1rem;
+/* Middle section of card details */
+.card__details__middle {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
-.card .card__details .card__details__top {
-    border: none;
-}
-
-.card .card__details .card__details__middle {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(var(--card-border-rgb), 0.15);
-    height: 160px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.card .card__details .card__details__middle  .description {
-    font-size: 14px;
-}
-
-.card .card__details .card__details__bottom {
-    padding: 1rem 0;
-    flex: 1;
+/* Bottom section of card details */
+.card__details__bottom {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-}
-
-/* Stack */
-
-.card .stack__container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
-}
-
-.card .stack__container .stack__left {
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    padding: 0 0.5rem;
-    border-radius: var(--border-radius-2);
-    background: rgba(var(--card-rgb), 0.1);
-    display: flex;
-    align-items: center;
-}
-
-.card .stack__container .stack__right {
-    flex: 1;
-}
-
-.card .stack__container .stack__right .stack_box__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-}
-
-.card .stack_container .stack_right .stack_box_container .stack_box .stack_icon_container {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 5px;
-    font-size: 14px;
 }
 
-.card .stack_container .stack_right .stack_box_container .stack_box  .stack_icon_container  .stack_icon {
-    display: flex;
-    align-items: center;
-}
-
-.card .stack_container .stack_right .stack_box, .stack_view_more {
-    border-radius: var(--border-radius-2);
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    padding: 0.5rem;
-}
-
-.card .stack_view_more {
+/* Picture container for the card */
+.picture {
     width: 100%;
-    padding: 1rem 0.5rem;
-    margin-top: 1rem;
-    position: relative;
-    font-size: 14px;
-    cursor: pointer;
+    height: 250px; /* Increased height */
+    overflow: hidden;
+    border-radius: var(--border-radius-3) var(--border-radius-3) 0 0;
 }
 
-.card .stack_view_more .more_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card .stack_view_more .stack_expand_box {
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    padding: 2rem 1rem;
-    background: var(--color-ui-2);
-    border-radius: var(--border-radius-2);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    display: none;
-}
-
-.card .stack_view_more .open_stack_expand_box {
+/* Picture styling */
+.picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-.card .stack_view_more  .stack_expand_box title {
-    margin-bottom: 1rem;
+/* Title styling */
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Description styling */
+.description {
+    font-size: 15px;
+    color: #c9cacc;
+    letter-spacing: 1px;
+}
+
+/* Stack container, now flex-wrap to keep items in a line */
+.stack__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Stack left section */
+.stack__left {
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Stack right section */
+.stack__right {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Allow wrapping of stack boxes */
+    gap: 8px;
+}
+
+/* Stack box container */
+.stack_box__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+/* Stack box styling */
+.stack_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    background: rgba(var(--card-rgb), 0.1);
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--light-blue-border); /* Light blue border */
+    animation: stackItemZoomIn 500ms;
+}
+
+/* Stack item zoom-in effect */
+@keyframes stackItemZoomIn {
+    0% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Stack icon styling */
+.stack_icon {
+    font-size: 13px;
+    margin-right: 3px;
+}
+
+/* Stack name styling */
+.stack_name {
+    font-size: 12px;
+    color: #d6d6d7;
+    letter-spacing: 1px;
+}
+
+/* Stack view more section */
+.stack_view_more {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* More button styling */
+.more_btn {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 2px solid var(--dark-blue-border); /* Dark blue border */
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-top: 5px;
+    color: rgba(var(--card-border-rgb), 0.6);
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 200ms;
+}
+
+/* More button hover effect */
+.more_btn:hover {
+    background: rgba(var(--card-rgb), 0.14);
+}
+
+/* Expanded stack box */
+.stack_expand_box {
+    display: none;
+    animation: stackExpandZoomIn 500ms;
+}
+
+/* Stack expand zoom-in effect */
+@keyframes stackExpandZoomIn {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Open expanded stack box */
+.stack_expand_box.open_stack_expand_box {
+    display: block;
+    background: rgba(var(--card-rgb), 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--dark-blue-border); /* Dark blue border */
+    animation: stackExpandZoomIn 500ms;
+}
+
+/* Title inside expanded stack box */
+.stack_expand_box .title {
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Button container */
+.button__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* General button styling */
+.btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
     font-size: 14px;
     font-weight: 500;
+    display: inline-block;
+    transition: background 0.3s;
+    user-select: none;
 }
 
-.card .button__container {
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Primary button styling */
+.btn__primary {
+    background: #c084fc;
+    border: 2px solid var(--dark-blue-border); /* Dark blue border */
 }
 
-.card .button__container .btn__share {
-    border: 1px solid transparent !important;
-    transition: var(--transition);
-    width: 2.5rem;
-    aspect-ratio: 1/1;
-    border-radius: var(--border-radius-5);
+/* Primary button hover effect */
+.btn__primary:hover {
+    background: #9d4edd;
+}
+
+/* Share button styling */
+.btn__share {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background: rgba(var(--card-rgb), 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px solid var(--dark-blue-border); /* Dark blue border */
     cursor: pointer;
 }
 
-.card .button__container .btn__share:hover {
-    background: rgba(var(--card-rgb), 0.1) !important;
-    border-color: rgba(var(--card-border-rgb), 0.15) !important;
+/* Share button hover effect */
+.btn__share:hover {
+    background: rgba(var(--card-rgb), 0.14);
 }

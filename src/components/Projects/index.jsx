@@ -53,7 +53,7 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className="section__wrapper projects__container">
-                <div className="  center">
+                <div className="center">
                     <h2 className="primary__title">Projects</h2>
                 </div>
             </div>
@@ -80,11 +80,13 @@ const Projects = () => {
                     <Card
                         title={project.title}
                         image={project.image}
-                        data={project.data}
+                        description={project.data.description}
                         stack={project.stack}
+                        demoLink={project.data.demoLink}
                         key={index}
                     />
-                ))}            </div>
+                ))}
+            </div>
         </section>
     );
 };

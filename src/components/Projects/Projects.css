@@ -14,6 +14,89 @@ Projects.css
     text-fill-color: transparent;
     text-align: center;
 }
+#projects {
+    padding: 50px 0;
+    background: #1c1c1e;
+}
+
+#projects .primary__title {
+    font-size: 2.5rem;
+    background: linear-gradient(260deg, #c084fc, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+}
+
+#projects .projects__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects nav {
+    position: relative;
+    width: 100%;
+    max-width: max-content;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+    user-select: none;
+}
+
+#projects nav button {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    padding: 0 23px;
+    z-index: 1;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#projects .active__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: linear-gradient(260deg, #c084fc, #9d4edd);
+}
+
+.card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .card__container {
+        grid-template-columns: 1fr;
+    }
+
+    #projects nav button {
+        font-size: 14px;
+    }
+}
 
 #projects .projects__container {
     display: flex;
