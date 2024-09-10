@@ -9,22 +9,22 @@ import { profile3, profile4, profile5, profile6 } from '../../images';
 const data = [
   {
     avatar: profile3,
-    name: 'Samuel Eze',
+    name: 'Malisha Rasiru',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   },
   {
     avatar: profile4,
-    name: 'Emmanuel Joseph',
+    name: 'Sample 1',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   },
   {
     avatar: profile5,
-    name: 'Gloria Chiwendu',
+    name: 'Sample 2',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   },
   {
     avatar: profile6,
-    name: 'Precious Stone',
+    name: 'sample 3',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   }
 ];
