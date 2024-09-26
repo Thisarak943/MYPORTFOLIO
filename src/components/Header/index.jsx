@@ -22,7 +22,10 @@ const Header = () => {
             </div>
             <Facts/>
             <div className='header_info_bottom'>
-              <button className='btn'>Download CV</button> <br></br>
+            <a href="https://linkedin.com/in/thisara-kandage-4b2904249" target="_blank" rel="noopener noreferrer" className='btn'>
+    LinkedIn
+</a>
+ <br></br>
               <a href="mailto:thisarak943@gmail.com" className="btn">Email Me</a>
             </div>
           </div>

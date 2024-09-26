@@ -299,16 +299,16 @@ export const socialHandles = [
   {
     name:"Github",
     icon:<AiFillGithub/>,
-    link:"",
+    link:"https://github.com/Thisarak943",
   },
   {
     name:"LinkedIn",
     icon:<AiFillLinkedin/>,
-    link:"",
+    link:"https://linkedin.com/in/thisara-kandage-4b2904249",
   },
   {
     name:"Youtube",
     icon:<AiFillYoutube/>,
-    link:"https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    link:"",
   },
 ];

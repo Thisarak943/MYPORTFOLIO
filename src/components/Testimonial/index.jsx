@@ -10,21 +10,26 @@ const data = [
   {
     avatar: profile3,
     name: 'Malisha Rasiru',
-    review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
+    review:`
+    
+    Dedicated Trainee Technical Support Engineer at Sanfer Technologies,
+     Malisha Rasiru is committed to providing exceptional technical support
+      and troubleshooting. Skilled in problem-solving and customer service.
+      `
   },
   {
     avatar: profile4,
-    name: 'Sample 1',
+    name: 'Avishka Gunawardene',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   },
   {
     avatar: profile5,
-    name: 'Sample 2',
+    name: 'Tharaka De Silva',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   },
   {
     avatar: profile6,
-    name: 'sample 3',
+    name: 'Ashen Silva',
     review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea`
   }
 ];

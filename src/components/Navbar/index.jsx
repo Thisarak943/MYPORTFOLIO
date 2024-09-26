@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from 'react';
 import "./Navbar.css";
 import { SiWebmoney } from 'react-icons/si';
@@ -40,7 +39,7 @@ const Navbar = () => {
       </div>
 
       <div className="nav__buttons__group">
-        <button className='btn btn__primary'> Hire Me </button>
+        <a href="mailto:thisarak943@gmail.com" className='btn btn__primary'>Hire Me</a>
         <FaBars className='menu' onClick={() => setShowSidebar(!showSidebar)} />
       </div>
     </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 import './Services.css'
 import { FaPaintBrush } from 'react-icons/fa'
 import { BsCodeSquare } from 'react-icons/bs'
-import { TfiWrite } from 'react-icons/tfi'
+import { MdPhoneAndroid } from 'react-icons/md' // New icon for mobile apps development
 
 const Services = () => {
     return (
@@ -26,16 +26,16 @@ const Services = () => {
                         </div>
                         <div className='service_middle'>
                             <p className='text_muted description'>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-                                voluptatum earum quam tempore, repellat aut vero ut eum, provident accusamus
-                                eligendi, adipisci sequi reiciendis quisquam? Sapiente optio rerum sequi!
+                            UI/UX design focuses on creating user-friendly interfaces and improving the user experience. 
+                             UI emphasizes aesthetics and ease of navigation, while UX ensures functionality and efficiency.
+                              Together, they balance design and usability to help users achieve their goals effortlessly.
                             </p>
                         </div>
                         <div className='service_bottom'>
                             <button className='btn btn_primary'>Read more</button>
                         </div>
                     </article>
-                    {/* End ui/ux */}
+                    {/* End UI/UX */}
 
                     <article className="service" style={{ "--color-primary": "var(--color-success)" }}>
                         <div className='service_top'>
@@ -46,36 +46,36 @@ const Services = () => {
                         </div>
                         <div className='service_middle'>
                             <p className='text_muted description'>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-                                voluptatum earum quam tempore, repellat aut vero ut eum, provident accusamus
-                                eligendi, adipisci sequi reiciendis quisquam? Sapiente optio rerum sequi!
+                            Web design focuses on creating visually appealing and functional websites. It combines layout, color schemes, 
+                            typography, and responsive design to ensure a seamless user experience across devices. Good web design enhances 
+                            usability, improves navigation, and aligns with a brand’s identity to engage and retain visitors.
                             </p>
                         </div>
                         <div className='service_bottom'>
                             <button className='btn btn_primary'>Read more</button>
                         </div>
                     </article>
-                    {/* End Web development */}
+                    {/* End Web Development */}
 
                     <article className='service' style={{ "--color-primary": "blueviolet" }}>
                         <div className='service_top'>
                             <div className='icon_container'>
-                                <TfiWrite className='icon'/>
+                                <MdPhoneAndroid className='icon'/> {/* Updated icon */}
                             </div> 
-                            <h3 className='title'>Content Creation</h3>
+                            <h3 className='title'>Mobile Apps Development</h3>
                         </div>
                         <div className='service_middle'>
                             <p className='text_muted description'>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-                                voluptatum earum quam tempore, repellat aut vero ut eum, provident accusamus
-                                eligendi, adipisci sequi reiciendis quisquam? Sapiente optio rerum sequi!
+                            Mobile app development involves creating applications for smartphones and tablets, 
+                            focusing on user-friendly interfaces and performance. It combines intuitive design,
+                             responsive layouts, and efficient coding to ensure apps run smoothly across devices. 
                             </p>
                         </div>
                         <div className='service_bottom'>
                             <button className='btn btn_primary'>Read more</button>
                         </div>
                     </article>
-                    {/* End Content Creation */}
+                    {/* End Mobile Apps Development */}
                 </div>
             </div>
         </section>
